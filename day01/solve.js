@@ -16,9 +16,8 @@ function getFuelRequirementRecursive(weight) {
         }
 }
 
-const fuelPerModuleWithoutRecursion = moduleWeights.map(getFuelRequirement);
-const fuelPerModule = moduleWeights.map(getFuelRequirementRecursive);
-const totalFuel = fuelPerModule.reduce((f1, f2) => f1 + f2);
+const fuelPerModule = moduleWeights.map(getFuelRequirement);
+const fuelPerModuleRecursive = moduleWeights.map(getFuelRequirementRecursive);
 
-console.log("Fuel requirement without recursion: " + fuelPerModuleWithoutRecursion.reduce((w1, w2) => w1 + w2));
-console.log("Total fuel requirement: " + totalFuel);
+console.log("Fuel requirement without recursion: " + fuelPerModule.reduce((f1, f2) => f1 + f2));
+console.log("Total fuel requirement: " + fuelPerModuleRecursive.reduce((f1, f2) => f1 + f2));
