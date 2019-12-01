@@ -15,4 +15,5 @@ function getFuelRequirement(weight) {
 const fuelPerModule = moduleWeights.map(getFuelRequirement)
 const totalFuel = fuelPerModule.reduce((f1, f2) => f1 + f2)
 
-console.log(totalFuel);
+console.log("Total module weight: " + moduleWeights.reduce((w1, w2) => w1 + w2));
+console.log("Total fuel requirement: " + totalFuel);
