@@ -30,7 +30,6 @@ p1Copy[2] = 2
 console.log(run(p1Copy)[0]);
 
 // We're lucky that this is easily brute forced
-// A non-naive way to do this would probably be running the program in reverse... 
 for (let i = 0; i < 1e4; i++) {
 	for (let j = 0; j < 1e4; j++) {
 		const pCopy = program.slice()
